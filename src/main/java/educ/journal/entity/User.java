@@ -1,6 +1,7 @@
 package educ.journal.entity;
 
 import educ.journal.enums.Role;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,8 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "usr")
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 public class User {
 

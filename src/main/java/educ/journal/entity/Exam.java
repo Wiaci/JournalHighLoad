@@ -1,17 +1,14 @@
 package educ.journal.entity;
 
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.cglib.core.GeneratorStrategy;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "exam")
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 public class Exam {
 

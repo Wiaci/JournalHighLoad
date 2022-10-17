@@ -1,5 +1,6 @@
 package educ.journal.entity;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,8 +11,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "teacher")
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 public class Teacher {
 
