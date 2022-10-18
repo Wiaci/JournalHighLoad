@@ -1,7 +1,7 @@
 package educ.journal.enums;
 
 public enum Role {
-    ADMINISTRATOR,
+    ADMIN,
     TEACHER,
     STUDENT
 }

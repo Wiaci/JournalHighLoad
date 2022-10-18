@@ -1,9 +1,12 @@
 create table usr (
     id int primary key,
-    name varchar(255) not null,
-    login varchar(255) not null,
+    username varchar(255) not null,
+    firstname varchar(255) not null,
+    lastname varchar(255) not null,
     password varchar(255) not null,
-    role int not null
+    last_password_reset_date date not null,
+    activity varchar(10) not null,
+    role varchar(10) not null
 );
 
 create table teacher (

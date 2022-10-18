@@ -1,15 +1,14 @@
 package educ.journal.entity;
 
+import educ.journal.enums.Activity;
 import educ.journal.enums.Role;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "usr")
@@ -18,12 +17,22 @@ import javax.persistence.Table;
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
-    private String login;
+    private String username;
+    //private String login;
+    private String firstname;
+    private String lastname;
     private String password;
+
+    @Column(name = "last_password_reset_date")
+    private Date lastPasswordResetDate;
+
+    @Enumerated(EnumType.STRING)
     private Role role;
+
+    @Enumerated(EnumType.STRING)
+    private Activity activity;
 
 }
